@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="56.788368mm"
+   height="23.916994mm"
+   viewBox="0 0 56.788368 23.916994"
+   version="1.1"
+   id="svg30939"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   sodipodi:docname="Star Destroyer.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview30941"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.8677643"
+     inkscape:cx="81.771017"
+     inkscape:cy="80.899257"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="2560"
+     inkscape:window-y="161"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs30936" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-70.404282,-96.767311)">
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.10725;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect37592"
+       width="4.2583537"
+       height="17.571196"
+       x="71.963722"
+       y="99.699478" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.916001;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 78.507031,97.225307 48.227769,11.327923 -48.175423,11.67308 -4.353657,-4.45994 -3.205877,-3.36195 c -0.100828,-4.42369 -0.100398,-4.40171 -0.137561,-7.81258 l 2.933512,-2.93029 z"
+       id="path31786"
+       sodipodi:nodetypes="cccccccc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 100.05391,108.66104 1.50017,-4.31331 -3.655221,-0.95108 -1.60715,5.09279 1.895324,5.22129 3.714387,-0.9086 z"
+       id="path35712"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 95.471635,102.83387 -5.467057,-1.37959 -2.7551,7.03484 2.473559,7.30944 6.315107,-1.60206 -2.096784,-5.80605 z"
+       id="path35714"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 79.054587,118.30686 8.473011,-2.13684 -2.374346,-7.64716 2.323805,-7.60356 -8.415362,-2.000482 -3.6719,9.247882 z"
+       id="path36490"
+       sodipodi:nodetypes="ccccccc" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.15058;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect37218"
+       width="3.0891252"
+       height="10.664893"
+       x="79.4776"
+       y="103.22372" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 80.974609,105.05686 0.0043,1.58019"
+       id="path37563"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 81.023222,110.48858 0.0043,1.58019"
+       id="path37563-0"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

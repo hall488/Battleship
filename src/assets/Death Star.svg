@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="21.367445mm"
+   height="20.004mm"
+   viewBox="0 0 21.367445 20.004"
+   version="1.1"
+   id="svg27256"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   sodipodi:docname="Death Star.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview27258"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="6.7877126"
+     inkscape:cx="32.927145"
+     inkscape:cy="46.112736"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="2560"
+     inkscape:window-y="161"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs27253" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-66.149504,-125.21191)">
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.004;stroke-linecap:round"
+       id="path27740"
+       cx="76.883606"
+       cy="135.21391"
+       r="10" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.5;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="path27742"
+       cx="72.778267"
+       cy="130.99823"
+       r="2" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.916;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
+       d="m 66.745164,135.75664 c 8.800838,3.5332 20.203381,0.18823 20.203381,0.18823"
+       id="path28733" />
+  </g>
+</svg>
