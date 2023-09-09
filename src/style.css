@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    overflow-y: hidden;
+    background-color: rgb(29, 29, 29);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    margin-top: 20px;
+    position: relative;
+}
+
+.frame-cover {
+    background-color: rgb(29, 29, 29);
+    width: 100vw;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+}
