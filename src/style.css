@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --text-color: rgb(245, 224, 57);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,6 +20,8 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    color: var(--text-color);
 }
 
 iframe {
@@ -23,4 +35,135 @@ iframe {
     height: 100px;
     position: absolute;
     bottom: 0;
+}
+
+.teamSelect {
+    background-color: rgb(4, 4, 4);
+    border: 5px solid whitesmoke;
+    border-radius: 10px;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    
+}
+
+.teams {
+    display: flex;
+    justify-content: space-around;
+    gap: 32px;
+}
+
+.empire,.rebels {
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.empire:hover, .rebels:hover {
+    background-color: grey;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    font-size: 24px;
+}
+
+.header {
+    text-align: center;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-bottom: 5px solid whitesmoke;
+}
+
+.text {
+    text-align: center;
+}
+
+.ship-select {
+    display: flex;
+    gap: 32px;
+    
+}
+
+.ships {
+    margin: 0;
+    padding: 8px;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    background-color: rgb(4, 4, 4);
+    border: 2px solid whitesmoke;
+}
+
+.ship {
+    list-style-type: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(11, 20px);
+    grid-template-rows: repeat(11, 20px);
+    border: 1px solid whitesmoke;
+    background-color: rgb(4, 4, 4);
+}
+
+.coordinate {
+    border: 1px solid whitesmoke;
+    box-sizing: border-box;
+}
+
+.selected-ship {
+    position: absolute;
+    pointer-events: none;
+}
+
+.selected-ship > object {
+    border: 2px dashed green;
+    position: relative;
+    top: -2px;
+    left: -2px;
+}
+
+.rotated > object {
+    left: 2px;
+}
+
+object {
+    transform-origin: top left;    
+}
+
+.footer {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.fa-github {
+    color: var(--text-color);
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+@keyframes invalidShake {
+    0% { transform: translateX(0); border: 2px dashed red; }
+    25% { transform: translateX(5px);}
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0); }
 }

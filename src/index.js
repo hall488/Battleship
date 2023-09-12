@@ -1,31 +1,41 @@
 import "./style.css";
+import "@fortawesome/fontawesome-free/js/fontawesome";
+import "@fortawesome/fontawesome-free/js/solid";
+import "@fortawesome/fontawesome-free/js/brands";
+import ScrollingIntro from "./scrollingIntro";
+import Observable from "./observable";
+import TeamSelectDom from "./teamSelectDom";
+import ShipSelect from "./shipSelect";
+import ShipSelectDom from "./shipSelectDom";
 
 const container = document.querySelector(".container");
-const intro = container.querySelector("iframe");
 
-window.focus();
+const introObserver = Observable();
+const teamObserver = Observable();
+const selectObserver = Observable();
+const placementObserver = Observable();
 
-window.addEventListener("load", () => {
-  const clientX = document.documentElement.clientWidth;
-  const clientY = document.documentElement.clientHeight;
-  intro.setAttribute("width", clientX - 40);
-  intro.setAttribute("height", clientY - 40);
-});
+const scroller = ScrollingIntro(container, introObserver);
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    container.remove(intro);
-  }
-});
+const skipIntro = true;
+const skipTeam = true;
 
-window.addEventListener("blur", () => {
-  setTimeout(() => {
-    if (document.activeElement == intro) {
-      setTimeout(removeIntro, 92000);
-    }
-  });
-});
+const teamSelectDom = TeamSelectDom(container, teamObserver);
 
-const removeIntro = () => {
-  container.remove(intro);
-};
+introObserver.subscribe(teamSelectDom.buildTeamSelect);
+
+if (skipIntro) {
+  scroller.removeIntro();
+}
+
+const shipSelect = ShipSelect(placementObserver);
+const shipSelectDom = ShipSelectDom(container, selectObserver);
+
+teamObserver.subscribe(shipSelectDom.buildShipSelect);
+
+selectObserver.subscribe(shipSelect.placeShip);
+placementObserver.subscribe(shipSelectDom.checkShip);
+
+// if (skipTeam) {
+//   container.querySelector(".rebels").click();
+// }
