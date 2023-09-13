@@ -11,7 +11,6 @@ const Grid = (n) => {
   }
 
   const getVal = (x, y) => {
-    console.log(x, y);
     return array[y][x];
   };
 
@@ -35,9 +34,20 @@ const Grid = (n) => {
     }
   };
 
+  const clearByValue = (val) => {
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
+        if (getVal(i, j) == val) {
+          console.log("cleared");
+          setVal(i, j, null);
+        }
+      }
+    }
+  };
+
   const getArray = () => array;
 
-  return { getArray, getVal, setVal, width, height };
+  return { clearByValue, getArray, getVal, setVal, width, height };
 };
 
 export default Grid;

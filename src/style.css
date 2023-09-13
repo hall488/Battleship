@@ -13,6 +13,12 @@ body {
     padding: 0;
 }
 
+.col-flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .container {
     overflow-y: hidden;
     background-color: rgb(29, 29, 29);
@@ -83,8 +89,7 @@ iframe {
 
 .ship-select {
     display: flex;
-    gap: 32px;
-    
+    gap: 32px;    
 }
 
 .ships {
@@ -121,18 +126,30 @@ iframe {
 }
 
 .selected-ship > object {
-    border: 2px dashed green;
     position: relative;
-    top: -2px;
-    left: -2px;
-}
-
-.rotated > object {
-    left: 2px;
 }
 
 object {
     transform-origin: top left;    
+    user-select: none;
+}
+
+.submit {
+    padding: 4px 8px;
+    align-self: center;
+    margin: auto;
+    border: 2px solid var(--text-color);
+    font-size: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+.submit:hover {
+    filter: brightness(0%) invert();
+}
+
+.b-black {
+    background-color: rgb(4, 4, 4);
 }
 
 .footer {
@@ -161,9 +178,9 @@ object {
 }
 
 @keyframes invalidShake {
-    0% { transform: translateX(0); border: 2px dashed red; }
+    0% { transform: translateX(0); filter: hue-rotate(-54deg) saturate(1000%)}
     25% { transform: translateX(5px);}
     50% { transform: translateX(-5px) }
     75% { transform: translateX(5px) }
-    100% { transform: translateX(0); }
+    100% { transform: translateX(0); filter:hue-rotate(-54deg) saturate(1000%)}
 }

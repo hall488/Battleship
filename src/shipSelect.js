@@ -1,12 +1,28 @@
 import Grid from "./grid";
 import Ship from "./ship";
 
-const ShipSelect = (placementObserver) => {
+const ShipSelect = (placementObserver, startObserver) => {
   const grid = Grid(11);
-  let selectedShip;
+  const ships = [];
+
+  const observerHandler = (data) => {
+    console.log(data);
+    if (typeof data == "object") placeShip(data);
+    else submitGrid();
+  };
+
+  const submitGrid = () => {
+    startObserver.notify(grid);
+  };
 
   const placeShip = ({ id, x, y, rotated, width, height }) => {
-    console.log(x, y);
+    if (ships.includes(id)) {
+      ships.splice(ships.indexOf(id), 1);
+      grid.clearByValue(id);
+    }
+
+    ships.push(id);
+
     let passed = !rotated
       ? checkBounds(x, y, width, height)
       : checkBounds(x, y, height, width);
@@ -16,18 +32,16 @@ const ShipSelect = (placementObserver) => {
         ? assignGridValues(id, x, y, width, height)
         : assignGridValues(id, x, y, height, width);
     }
-    //selectedShip = Ship(...Object.values(data));
 
-    placementObserver.notify(passed);
+    placementObserver.notify([passed, ships.length == 5 ? grid : false]);
   };
 
   const checkBounds = (x, y, width, height) => {
-    console.log(x, y, width, height);
     for (let i = x; i < x + width; i++) {
       for (let j = y; j < y + height; j++) {
         if (
-          grid.width() <= x ||
-          grid.height() <= y ||
+          grid.width() <= i ||
+          grid.height() <= j ||
           grid.getVal(i, j) !== null
         ) {
           return false;
@@ -45,7 +59,7 @@ const ShipSelect = (placementObserver) => {
     }
   };
 
-  return { placeShip };
+  return { observerHandler };
 };
 
 export default ShipSelect;

@@ -8,9 +8,10 @@ import starDestroyer from "./assets/Star Destroyer.svg";
 import tieBomber from "./assets/Tie Bomber.svg";
 import xWing from "./assets/X Wing.svg";
 
-const ShipSelectDom = (container, shipObserver) => {
+const ShipSelectDom = (container, shipObserver, startObserver) => {
   let ships = [];
   let selectedShip;
+  let submitBtn;
 
   const rebelShips = {
     0: { source: starCruiser, width: 5, height: 1 },
@@ -33,6 +34,11 @@ const ShipSelectDom = (container, shipObserver) => {
 
     const grid = container.querySelector(".grid");
     selectedShip = document.querySelector(".selected-ship");
+    submitBtn = document.querySelector(".submit");
+
+    submitBtn.addEventListener("click", () => {
+      shipObserver.notify();
+    });
 
     createGrid(grid, 11);
 
@@ -79,15 +85,25 @@ const ShipSelectDom = (container, shipObserver) => {
     }
   };
 
-  const checkShip = (allowed) => {
+  const checkShip = ([allowed, final]) => {
     let ship = selectedShip.children[0];
     if (allowed) {
       selectedShip.parentNode.append(ship);
       ships.forEach((s) => {
         s.style.pointerEvents = "";
       });
+      selectedShip.style.width = 0;
+      selectedShip.style.height = 0;
+
+      selectedShip.parentNode.removeChild(selectedShip);
     } else {
-      ship.style.animation = "invalidShake .5s";
+      selectedShip.style.animation = "invalidShake .25s";
+    }
+
+    if (final) {
+      submitBtn.style.display = "flex";
+    } else {
+      submitBtn.style.display = "none";
     }
   };
 
@@ -99,10 +115,12 @@ const ShipSelectDom = (container, shipObserver) => {
         let ship = selectedShip.children[0];
 
         let rotation = ship.getAttribute("rotated");
-        if (rotation == true) {
+        if (rotation == "true") {
           selectedShip.classList.remove("rotated");
 
           ship.style.transform = `rotate(0deg)`;
+          selectedShip.style.width = ship.getAttribute("width");
+          selectedShip.style.height = ship.getAttribute("height");
         } else {
           selectedShip.classList.add("rotated");
           ship.style.transform = `
@@ -111,9 +129,11 @@ const ShipSelectDom = (container, shipObserver) => {
                 0, 
                 -${ship.getAttribute("height")})
             `;
+          selectedShip.style.width = ship.getAttribute("height");
+          selectedShip.style.height = ship.getAttribute("width");
         }
 
-        ship.setAttribute("rotated", !rotation);
+        ship.setAttribute("rotated", !(rotation == "true"));
       }
     });
 
@@ -131,8 +151,8 @@ const ShipSelectDom = (container, shipObserver) => {
       component.setAttribute("height", `${ship.height * 20}px`);
       [...ul.children][i].style.height = `${ship.height * 20}px`;
 
-      component.addEventListener("animationend", () => {
-        component.style.animation = "none";
+      selectedShip.addEventListener("animationend", () => {
+        selectedShip.style.animation = "none";
       });
 
       ships.push(component);
@@ -151,7 +171,16 @@ const ShipSelectDom = (container, shipObserver) => {
   const shipSelectionHandler = (component, ul, li) => {
     if (!selectedShip.hasChildNodes()) {
       if (component.parentNode === li) li.append(selectedShip);
-      if (selectedShip) selectedShip.append(component);
+
+      selectedShip.append(component);
+      submitBtn.style.display = "none";
+      if (component.getAttribute("rotated") == "false") {
+        selectedShip.style.width = component.getAttribute("width");
+        selectedShip.style.height = component.getAttribute("height");
+      } else {
+        selectedShip.style.width = component.getAttribute("height");
+        selectedShip.style.height = component.getAttribute("width");
+      }
 
       ships.forEach((s) => {
         if (selectedShip.children[0] === s) {

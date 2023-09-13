@@ -14,6 +14,7 @@ const introObserver = Observable();
 const teamObserver = Observable();
 const selectObserver = Observable();
 const placementObserver = Observable();
+const startObserver = Observable();
 
 const scroller = ScrollingIntro(container, introObserver);
 
@@ -28,13 +29,20 @@ if (skipIntro) {
   scroller.removeIntro();
 }
 
-const shipSelect = ShipSelect(placementObserver);
+const shipSelect = ShipSelect(placementObserver, startObserver);
 const shipSelectDom = ShipSelectDom(container, selectObserver);
 
 teamObserver.subscribe(shipSelectDom.buildShipSelect);
 
-selectObserver.subscribe(shipSelect.placeShip);
+selectObserver.subscribe(shipSelect.observerHandler);
 placementObserver.subscribe(shipSelectDom.checkShip);
+
+const startGame = (grid) => {
+  container.innerHTML = "";
+  console.log(grid);
+};
+
+startObserver.subscribe(startGame);
 
 // if (skipTeam) {
 //   container.querySelector(".rebels").click();
