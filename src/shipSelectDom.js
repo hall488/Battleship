@@ -8,7 +8,7 @@ import starDestroyer from "./assets/Star Destroyer.svg";
 import tieBomber from "./assets/Tie Bomber.svg";
 import xWing from "./assets/X Wing.svg";
 
-const ShipSelectDom = (container, shipObserver, startObserver) => {
+const ShipSelectDom = (container, shipObserver) => {
   let ships = [];
   let selectedShip;
   let submitBtn;
@@ -37,10 +37,10 @@ const ShipSelectDom = (container, shipObserver, startObserver) => {
     submitBtn = document.querySelector(".submit");
 
     submitBtn.addEventListener("click", () => {
-      shipObserver.notify();
+      shipObserver.notify(team);
     });
 
-    createGrid(grid, 11);
+    createGrid(grid, 10);
 
     createShipPanel(team);
   };

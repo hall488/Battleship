@@ -109,8 +109,8 @@ iframe {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(11, 20px);
-    grid-template-rows: repeat(11, 20px);
+    grid-template-columns: repeat(10, 20px);
+    grid-template-rows: repeat(10, 20px);
     border: 1px solid whitesmoke;
     background-color: rgb(4, 4, 4);
 }
@@ -150,6 +150,21 @@ object {
 
 .b-black {
     background-color: rgb(4, 4, 4);
+}
+
+.grids {
+    display: flex;
+    gap: 16px;
+}
+
+.player, .computer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.computer > .grid > .coordinate:hover {
+    background-color: red;
 }
 
 .footer {

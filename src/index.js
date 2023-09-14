@@ -7,6 +7,9 @@ import Observable from "./observable";
 import TeamSelectDom from "./teamSelectDom";
 import ShipSelect from "./shipSelect";
 import ShipSelectDom from "./shipSelectDom";
+import Game from "./game";
+import GameDom from "./gameDom";
+import Grid from "./grid";
 
 const container = document.querySelector(".container");
 
@@ -37,12 +40,47 @@ teamObserver.subscribe(shipSelectDom.buildShipSelect);
 selectObserver.subscribe(shipSelect.observerHandler);
 placementObserver.subscribe(shipSelectDom.checkShip);
 
-const startGame = (grid) => {
-  container.innerHTML = "";
-  console.log(grid);
+const gameToDom = Observable();
+const domToGame = Observable();
+
+const game = Game(gameToDom);
+const gameDom = GameDom(container, domToGame);
+
+startObserver.subscribe(gameDom.buildGame);
+startObserver.subscribe(game.start);
+
+const testGrid = Grid(10);
+
+const fakeShips = (x, y, id) => {
+  if (id == 0) {
+    let width = 5;
+    let height = 1;
+    let rotated = "true";
+    testGrid.setVal(x, y, { id, x, y, rotated, width, height });
+    testGrid.setVal(x, y + 1, { id, x, y, rotated, width, height });
+    testGrid.setVal(x, y + 2, { id, x, y, rotated, width, height });
+    testGrid.setVal(x, y + 3, { id, x, y, rotated, width, height });
+    testGrid.setVal(x, y + 4, { id, x, y, rotated, width, height });
+  }
+
+  if (id == 1) {
+    let width = 2;
+    let height = 2;
+    let rotated = "false";
+    testGrid.setVal(x, y, { id, x, y, rotated, width, height });
+    testGrid.setVal(x + 1, y, { id, x, y, rotated, width, height });
+    testGrid.setVal(x, y + 1, { id, x, y, rotated, width, height });
+    testGrid.setVal(x + 1, y + 1, { id, x, y, rotated, width, height });
+  }
 };
 
-startObserver.subscribe(startGame);
+fakeShips(0, 0, "0");
+fakeShips(6, 6, "1");
+
+gameToDom.subscribe(gameDom.fromGame);
+domToGame.subscribe(game.fromDom);
+
+startObserver.notify([testGrid, "Rebels"]);
 
 // if (skipTeam) {
 //   container.querySelector(".rebels").click();

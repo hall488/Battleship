@@ -11,7 +11,7 @@ module.exports = merge(common, {
   },
   devtool: "inline-source-map",
   devServer: {
-    watchFiles: ["src/*.html"],
+    watchFiles: ["src/*.html", "src/*.css"],
     static: "./dist",
     // Dev server client for web socket transport, hot and live reload logic
     hot: false,

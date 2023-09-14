@@ -1,4 +1,4 @@
-const Ship = (_nid, _x, _y, _rotated, _width, _height) => {
+const Ship = (_id, _x, _y, _rotated, _width, _height) => {
   const id = () => _id;
   const x = () => _x;
   const y = () => _y;

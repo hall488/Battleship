@@ -37,8 +37,7 @@ const Grid = (n) => {
   const clearByValue = (val) => {
     for (let i = 0; i < n; i++) {
       for (let j = 0; j < n; j++) {
-        if (getVal(i, j) == val) {
-          console.log("cleared");
+        if (getVal(i, j) !== null && getVal(i, j).id == val) {
           setVal(i, j, null);
         }
       }
