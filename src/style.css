@@ -133,6 +133,7 @@ iframe {
 
 .selected-ship > object {
     position: relative;
+    filter: brightness(10000%);
 }
 
 object {
@@ -232,6 +233,13 @@ object {
 
 .winner > .restart:hover {
     filter: brightness(50%);
+}
+
+.frame-cover {
+    box-sizing: border-box;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
 }
 
 .footer {

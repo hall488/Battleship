@@ -13,6 +13,7 @@ const ShipSelectDom = (container, shipObserver) => {
     container.innerHTML = shipSelect;
 
     const grid = container.querySelector(".grid");
+
     selectedShip = document.querySelector(".selected-ship");
     submitBtn = document.querySelector(".submit");
 
@@ -67,6 +68,11 @@ const ShipSelectDom = (container, shipObserver) => {
 
   const checkShip = ([allowed, final]) => {
     let ship = selectedShip.children[0];
+
+    ship.addEventListener("animationend", () => {
+      ship.style.animation = "none";
+    });
+
     if (allowed) {
       selectedShip.parentNode.append(ship);
       ships.forEach((s) => {
@@ -77,7 +83,7 @@ const ShipSelectDom = (container, shipObserver) => {
 
       selectedShip.parentNode.removeChild(selectedShip);
     } else {
-      selectedShip.style.animation = "invalidShake .25s";
+      ship.style.animation = "invalidShake .25s";
     }
 
     if (final) {
@@ -130,10 +136,6 @@ const ShipSelectDom = (container, shipObserver) => {
       component.setAttribute("width", `${ship.width * 20}px`);
       component.setAttribute("height", `${ship.height * 20}px`);
       [...ul.children][i].style.height = `${ship.height * 20}px`;
-
-      selectedShip.addEventListener("animationend", () => {
-        selectedShip.style.animation = "none";
-      });
 
       ships.push(component);
       [...ul.children][i].append(component);

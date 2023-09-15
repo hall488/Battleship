@@ -10,11 +10,14 @@ const ScrollingIntro = (container, introObserver) => {
     intro.setAttribute("height", clientY - 40);
   });
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      removeIntro();
-    }
+  window.addEventListener("resize", () => {
+    const clientX = document.documentElement.clientWidth;
+    const clientY = document.documentElement.clientHeight;
+    intro.setAttribute("width", clientX - 40);
+    intro.setAttribute("height", clientY - 40);
   });
+
+  document.addEventListener("keydown", removeIntro, true);
 
   window.addEventListener("blur", () => {
     setTimeout(() => {
@@ -24,10 +27,16 @@ const ScrollingIntro = (container, introObserver) => {
     });
   });
 
-  const removeIntro = () => {
-    container.innerHTML = "";
-    introObserver.notify(true);
-  };
+  function removeIntro(e) {
+    if (e.key === "Escape") {
+      container.innerHTML = "";
+      introObserver.notify(true);
+
+      console.log("x");
+
+      document.removeEventListener("keydown", removeIntro, true);
+    }
+  }
 
   return { removeIntro };
 };
