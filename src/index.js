@@ -28,9 +28,9 @@ const teamSelectDom = TeamSelectDom(container, teamObserver);
 
 introObserver.subscribe(teamSelectDom.buildTeamSelect);
 
-if (skipIntro) {
-  scroller.removeIntro();
-}
+// if (skipIntro) {
+//   scroller.removeIntro();
+// }
 
 const shipSelect = ShipSelect(placementObserver, startObserver);
 const shipSelectDom = ShipSelectDom(container, selectObserver);
@@ -49,62 +49,62 @@ const gameDom = GameDom(container, domToGame);
 startObserver.subscribe(gameDom.buildGame);
 startObserver.subscribe(game.start);
 
-const testGrid = Grid(10);
+// const testGrid = Grid(10);
 
-const fakeShips = (x, y, id) => {
-  if (id == 0) {
-    let width = 5;
-    let height = 1;
-    let rotated = true;
-    testGrid.setVal(x, y, { id, x, y, rotated, width, height });
-    testGrid.setVal(x, y + 1, { id, x, y, rotated, width, height });
-    testGrid.setVal(x, y + 2, { id, x, y, rotated, width, height });
-    testGrid.setVal(x, y + 3, { id, x, y, rotated, width, height });
-    testGrid.setVal(x, y + 4, { id, x, y, rotated, width, height });
-  }
+// const fakeShips = (x, y, id) => {
+//   if (id == 0) {
+//     let width = 5;
+//     let height = 1;
+//     let rotated = true;
+//     testGrid.setVal(x, y, { id, x, y, rotated, width, height });
+//     testGrid.setVal(x, y + 1, { id, x, y, rotated, width, height });
+//     testGrid.setVal(x, y + 2, { id, x, y, rotated, width, height });
+//     testGrid.setVal(x, y + 3, { id, x, y, rotated, width, height });
+//     testGrid.setVal(x, y + 4, { id, x, y, rotated, width, height });
+//   }
 
-  if (id == 1) {
-    let width = 2;
-    let height = 2;
-    let rotated = false;
-    testGrid.setVal(x, y, { id, x, y, rotated, width, height });
-    testGrid.setVal(x + 1, y, { id, x, y, rotated, width, height });
-    testGrid.setVal(x, y + 1, { id, x, y, rotated, width, height });
-    testGrid.setVal(x + 1, y + 1, { id, x, y, rotated, width, height });
-  }
+//   if (id == 1) {
+//     let width = 2;
+//     let height = 2;
+//     let rotated = false;
+//     testGrid.setVal(x, y, { id, x, y, rotated, width, height });
+//     testGrid.setVal(x + 1, y, { id, x, y, rotated, width, height });
+//     testGrid.setVal(x, y + 1, { id, x, y, rotated, width, height });
+//     testGrid.setVal(x + 1, y + 1, { id, x, y, rotated, width, height });
+//   }
 
-  if (id == 2) {
-    let width = 3;
-    let height = 1;
-    let rotated = true;
-    testGrid.setVal(x, y, { id, x, y, rotated, width, height });
-    testGrid.setVal(x, y + 1, { id, x, y, rotated, width, height });
-    testGrid.setVal(x, y + 2, { id, x, y, rotated, width, height });
-  }
+//   if (id == 2) {
+//     let width = 3;
+//     let height = 1;
+//     let rotated = true;
+//     testGrid.setVal(x, y, { id, x, y, rotated, width, height });
+//     testGrid.setVal(x, y + 1, { id, x, y, rotated, width, height });
+//     testGrid.setVal(x, y + 2, { id, x, y, rotated, width, height });
+//   }
 
-  if (id == 3) {
-    let width = 2;
-    let height = 1;
-    let rotated = false;
-    testGrid.setVal(x, y, { id, x, y, rotated, width, height });
-    testGrid.setVal(x, y + 1, { id, x, y, rotated, width, height });
-    testGrid.setVal(x, y + 2, { id, x, y, rotated, width, height });
-  }
+//   if (id == 3) {
+//     let width = 2;
+//     let height = 1;
+//     let rotated = false;
+//     testGrid.setVal(x, y, { id, x, y, rotated, width, height });
+//     testGrid.setVal(x, y + 1, { id, x, y, rotated, width, height });
+//     testGrid.setVal(x, y + 2, { id, x, y, rotated, width, height });
+//   }
 
-  if (id == 4) {
-    let width = 2;
-    let height = 1;
-    let rotated = false;
-    testGrid.setVal(x, y, { id, x, y, rotated, width, height });
-    testGrid.setVal(x, y + 1, { id, x, y, rotated, width, height });
-  }
-};
+//   if (id == 4) {
+//     let width = 2;
+//     let height = 1;
+//     let rotated = false;
+//     testGrid.setVal(x, y, { id, x, y, rotated, width, height });
+//     testGrid.setVal(x, y + 1, { id, x, y, rotated, width, height });
+//   }
+// };
 
-fakeShips(0, 0, "0");
-fakeShips(6, 6, "1");
-fakeShips(4, 7, "2");
-fakeShips(2, 5, "3");
-fakeShips(3, 4, "4");
+// fakeShips(0, 0, "0");
+// fakeShips(6, 6, "1");
+// fakeShips(4, 7, "2");
+// fakeShips(2, 5, "3");
+// fakeShips(3, 4, "4");
 
 gameToDom.subscribe(gameDom.fromGame);
 domToGame.subscribe(game.fromDom);
