@@ -27,3 +27,10 @@ test("Clear Test", () => {
   grid.clearByValue(5);
   expect(grid.getVal(3, 4)).toBe(null);
 });
+
+test("Check Bounds Test", () => {
+  expect(grid.checkBounds(9, 5, 1, 5)).toBe(true);
+  expect(grid.checkBounds(0, 0, 9, 9)).toBe(true);
+  expect(grid.checkBounds(9, 5, 1, 6)).toBe(false);
+  expect(grid.checkBounds(9, 5, 2, 5)).toBe(false);
+});

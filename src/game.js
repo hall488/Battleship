@@ -22,14 +22,14 @@ const Game = (observer) => {
     playerData = grid;
     computerData = randomGrid(10);
 
-    console.log(
-      computerData.getArray().map((row) =>
-        row.map((v) => {
-          if (v === null) return null;
-          return v.id;
-        }),
-      ),
-    );
+    // console.log(
+    //   computerData.getArray().map((row) =>
+    //     row.map((v) => {
+    //       if (v === null) return null;
+    //       return v.id;
+    //     }),
+    //   ),
+    // );
 
     toDom({ type: "grid_data", data: { playerData } });
   };

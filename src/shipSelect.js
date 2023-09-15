@@ -1,5 +1,4 @@
 import Grid from "./grid";
-import Ship from "./ship";
 
 const ShipSelect = (placementObserver, startObserver) => {
   const grid = Grid(10);

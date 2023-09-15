@@ -22,7 +22,9 @@ const ScrollingIntro = (container, introObserver) => {
   window.addEventListener("blur", () => {
     setTimeout(() => {
       if (document.activeElement == intro) {
-        setTimeout(removeIntro, 92000);
+        setTimeout(() => {
+          removeIntro({ key: "Escape" });
+        }, 92000);
       }
     });
   });
@@ -31,8 +33,6 @@ const ScrollingIntro = (container, introObserver) => {
     if (e.key === "Escape") {
       container.innerHTML = "";
       introObserver.notify(true);
-
-      console.log("x");
 
       document.removeEventListener("keydown", removeIntro, true);
     }

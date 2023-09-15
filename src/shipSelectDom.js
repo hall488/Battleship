@@ -21,6 +21,10 @@ const ShipSelectDom = (container, shipObserver) => {
       shipObserver.notify(team);
     });
 
+    selectedShip.addEventListener("animationend", () => {
+      selectedShip.style.animation = "none";
+    });
+
     createGrid(grid, 10);
 
     createShipPanel(team);
@@ -43,9 +47,7 @@ const ShipSelectDom = (container, shipObserver) => {
         const div = document.createElement("div");
         div.classList.add("coordinate");
         div.addEventListener("mouseenter", (e) => {
-          if (selectedShip.hasChildNodes()) {
-            div.append(selectedShip);
-          }
+          div.append(selectedShip);
         });
         div.addEventListener("click", () => {
           if (selectedShip.hasChildNodes()) {
@@ -69,10 +71,6 @@ const ShipSelectDom = (container, shipObserver) => {
   const checkShip = ([allowed, final]) => {
     let ship = selectedShip.children[0];
 
-    ship.addEventListener("animationend", () => {
-      ship.style.animation = "none";
-    });
-
     if (allowed) {
       selectedShip.parentNode.append(ship);
       ships.forEach((s) => {
@@ -80,10 +78,8 @@ const ShipSelectDom = (container, shipObserver) => {
       });
       selectedShip.style.width = 0;
       selectedShip.style.height = 0;
-
-      selectedShip.parentNode.removeChild(selectedShip);
     } else {
-      ship.style.animation = "invalidShake .25s";
+      selectedShip.style.animation = "invalidShake .25s";
     }
 
     if (final) {
@@ -97,7 +93,11 @@ const ShipSelectDom = (container, shipObserver) => {
     const ul = document.querySelector(".ships");
 
     document.addEventListener("keypress", (e) => {
-      if (selectedShip.hasChildNodes() && e.key === "r") {
+      if (
+        selectedShip.parentNode.classList.contains("coordinate") &&
+        selectedShip.hasChildNodes() &&
+        e.key === "r"
+      ) {
         let ship = selectedShip.children[0];
 
         let rotation = ship.getAttribute("rotated");
