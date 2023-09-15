@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="21.367445mm"
+   height="20.004mm"
+   viewBox="0 0 21.367445 20.004"
+   version="1.1"
+   id="svg27256"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   sodipodi:docname="Death Star.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview27258"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="9.2761278"
+     inkscape:cx="46.948469"
+     inkscape:cy="42.097307"
+     inkscape:window-width="2490"
+     inkscape:window-height="1376"
+     inkscape:window-x="1990"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs27253" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-66.149504,-125.21191)">
+    <circle
+       style="fill:#f5e039;stroke:#000000;stroke-width:0.004;stroke-linecap:round;fill-opacity:1"
+       id="path27740"
+       cx="76.883606"
+       cy="135.21391"
+       r="10" />
+    <circle
+       style="fill:#f5e039;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="path27742"
+       cx="72.778267"
+       cy="130.99823"
+       r="2" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.916;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 86.867406,135.95035 c -0.195469,-0.0137 -0.06919,0.0205 -0.800806,0.27121 0,0 -9.879336,3.35344 -18.680174,-0.17976 0,0 -0.220986,-0.11874 -0.470584,-0.10334"
+       id="path28733"
+       sodipodi:nodetypes="cccc" />
+  </g>
+</svg>
