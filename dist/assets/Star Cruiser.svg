@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="104.77957mm"
+   height="20.828056mm"
+   viewBox="0 0 104.77957 20.828056"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   sodipodi:docname="Star Cruiser.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.1160769"
+     inkscape:cx="146.81923"
+     inkscape:cy="46.372412"
+     inkscape:window-width="2490"
+     inkscape:window-height="1376"
+     inkscape:window-x="1990"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-9.7594681,-56.476924)">
+    <g
+       id="g3066"
+       style="stroke:#f5e039;stroke-opacity:1;fill:#f5e339;fill-opacity:1">
+      <g
+         id="g10533"
+         style="stroke:#f5e039;stroke-opacity:1">
+        <ellipse
+           style="fill:#f5e339;fill-opacity:1;stroke:#f5e039;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+           id="path9167-5-3"
+           cx="14.368227"
+           cy="66.979103"
+           rx="3.6874018"
+           ry="1.1604576" />
+        <path
+           style="fill:#f5e339;fill-opacity:1;stroke:#f5e039;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+           d="m 22.923703,60.354725 c 10.960887,-7.636352 21.853643,0.02076 21.853643,0.02076"
+           id="path8813"
+           sodipodi:nodetypes="cc" />
+        <ellipse
+           style="fill:#f5e339;fill-opacity:1;stroke:#f5e039;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+           id="path9167-5"
+           cx="13.94687"
+           cy="74.474747"
+           rx="3.6874018"
+           ry="1.1604576" />
+        <ellipse
+           style="fill:#f5e339;fill-opacity:1;stroke:#f5e039;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+           id="path9167"
+           cx="14.241128"
+           cy="59.371559"
+           rx="3.6874018"
+           ry="1.1604576" />
+        <path
+           style="fill:#f5e339;fill-opacity:1;stroke:#f5e039;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+           d="m 22.610246,73.42718 c 10.960887,7.636352 21.853643,-0.02076 21.853643,-0.02076"
+           id="path8813-6"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:#f5e339;fill-opacity:1;stroke:#f5e039;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+           d="m 14.22834,73.302227 c 1.247894,-4.229619 1.278045,-8.57651 -0.08181,-12.743348 0,0 14.906658,-0.299323 51.343909,-0.388776 64.784211,-0.03723 64.678831,12.886742 -3.57e-4,13.359714 -36.866669,-0.156311 -51.26174,-0.22759 -51.26174,-0.22759 z"
+           id="path5694"
+           sodipodi:nodetypes="cccccc" />
+        <ellipse
+           style="fill:#000000;fill-opacity:1;stroke:#f5e039;stroke-width:1;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           id="path10074"
+           cx="84.147026"
+           cy="66.810875"
+           rx="12.046348"
+           ry="2.6133475" />
+      </g>
+    </g>
+  </g>
+</svg>
