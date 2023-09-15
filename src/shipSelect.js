@@ -15,8 +15,6 @@ const ShipSelect = (placementObserver, startObserver) => {
   };
 
   const placeShip = ({ id, x, y, rotated, width, height }) => {
-    console.log(grid.getArray());
-    console.log(rotated);
     if (ships.includes(id)) {
       ships.splice(ships.indexOf(id), 1);
       grid.clearByValue(id);
@@ -25,10 +23,8 @@ const ShipSelect = (placementObserver, startObserver) => {
     ships.push(id);
 
     let passed = !rotated
-      ? checkBounds(x, y, width, height)
-      : checkBounds(x, y, height, width);
-
-    console.log(passed);
+      ? grid.checkBounds(x, y, width, height)
+      : grid.checkBounds(x, y, height, width);
 
     if (passed) {
       !rotated
@@ -37,21 +33,6 @@ const ShipSelect = (placementObserver, startObserver) => {
     }
 
     placementObserver.notify([passed, ships.length == 5 ? grid : false]);
-  };
-
-  const checkBounds = (x, y, width, height) => {
-    for (let i = x; i < x + width; i++) {
-      for (let j = y; j < y + height; j++) {
-        if (
-          grid.width() <= i ||
-          grid.height() <= j ||
-          grid.getVal(i, j) !== null
-        ) {
-          return false;
-        }
-      }
-    }
-    return true;
   };
 
   const assignGridValues = (id, x, y, rotated, width, height) => {

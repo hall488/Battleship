@@ -44,9 +44,20 @@ const Grid = (n) => {
     }
   };
 
+  const checkBounds = (x, y, w, h) => {
+    for (let i = x; i < x + w; i++) {
+      for (let j = y; j < y + h; j++) {
+        if (width() <= i || height() <= j || getVal(i, j) !== null) {
+          return false;
+        }
+      }
+    }
+    return true;
+  };
+
   const getArray = () => array;
 
-  return { clearByValue, getArray, getVal, setVal, width, height };
+  return { checkBounds, clearByValue, getArray, getVal, setVal, width, height };
 };
 
 export default Grid;

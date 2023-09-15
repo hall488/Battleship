@@ -118,6 +118,12 @@ iframe {
 .coordinate {
     border: 1px solid whitesmoke;
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.coordinate > * {
+    grid-row-start: 1;
+ grid-column-start: 1;
 }
 
 .selected-ship {
@@ -130,8 +136,11 @@ iframe {
 }
 
 object {
+    z-index: 0;
+    position: relative;
     transform-origin: top left;    
     user-select: none;
+    transform: translate(-1px, -.75px);
 }
 
 .submit {
@@ -164,7 +173,65 @@ object {
 }
 
 .computer > .grid > .coordinate:hover {
-    background-color: red;
+    background-color: var(--text-color);
+}
+
+.try {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.fa-square-xmark {
+    color: rgb(212, 0, 0);
+}
+
+.fa-circle-dot {
+    color: rgb(45, 45, 160);
+}
+
+.winner {
+    z-index: 2;
+    display: none;
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--text-color);
+    padding: 16px;
+    background-color: rgb(4, 4, 4);
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    gap:8px;
+
+    transform: translate(-50%, -50%); 
+}
+
+.winner > .text {
+    text-align: center;
+    font-size: 24px;
+}
+
+.winner > .icon {
+    padding: 8px;
+    font-size: 48px;
+    border-top: 2px solid var(--text-color);
+}
+
+.winner > .restart {
+    order: 2;
+    border: 2px solid var(--text-color);
+}
+
+.winner > .restart:hover {
+    filter: brightness(50%);
 }
 
 .footer {
