@@ -29,12 +29,15 @@ const ScrollingIntro = (container, introObserver) => {
     });
   });
 
+  let singleTrigger = false;
+
   function removeIntro(e) {
-    if (e.key === "Escape") {
+    if (!singleTrigger && e.key === "Escape") {
       container.innerHTML = "";
       introObserver.notify(true);
 
       document.removeEventListener("keydown", removeIntro, true);
+      singleTrigger = true;
     }
   }
 
