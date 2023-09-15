@@ -25,12 +25,12 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="11.508815"
-     inkscape:cx="65.471555"
-     inkscape:cy="32.714055"
-     inkscape:window-width="2490"
-     inkscape:window-height="1376"
-     inkscape:window-x="1990"
-     inkscape:window-y="27"
+     inkscape:cx="65.558444"
+     inkscape:cy="32.757499"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="181"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1">
     <inkscape:grid
@@ -131,7 +131,7 @@
        cy="97.926422"
        r="1" />
     <path
-       style="fill:#000009;fill-opacity:1;stroke:none;stroke-width:0.455831;stroke-linecap:round"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.455831;stroke-linecap:round"
        d="m 61.924287,88.892228 3.161937,0.009 1.344772,2.789796 -5.827885,-0.01174 z"
        id="path23126"
        sodipodi:nodetypes="ccccc" />
